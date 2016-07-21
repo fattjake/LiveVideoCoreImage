@@ -22,6 +22,7 @@
 		F2E58FFC1D41241F003E390D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2E58FFF1D41241F003E390D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2E590011D41241F003E390D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2E5902A1D416B02003E390D /* CoreImage.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = CoreImage.playground; path = LiveVideoCoreImage/CoreImage.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +39,7 @@
 		F2E58FE91D41241F003E390D = {
 			isa = PBXGroup;
 			children = (
+				F2E5902A1D416B02003E390D /* CoreImage.playground */,
 				F2E58FF41D41241F003E390D /* LiveVideoCoreImage */,
 				F2E58FF31D41241F003E390D /* Products */,
 			);
@@ -288,6 +290,7 @@
 				F2E590061D41241F003E390D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
