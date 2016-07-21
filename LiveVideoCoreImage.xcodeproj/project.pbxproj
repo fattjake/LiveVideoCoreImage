@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2E58FF61D41241F003E390D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E58FF51D41241F003E390D /* AppDelegate.swift */; };
+		F2E58FF81D41241F003E390D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E58FF71D41241F003E390D /* ViewController.swift */; };
+		F2E58FFB1D41241F003E390D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E58FF91D41241F003E390D /* Main.storyboard */; };
+		F2E58FFD1D41241F003E390D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2E58FFC1D41241F003E390D /* Assets.xcassets */; };
+		F2E590001D41241F003E390D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2E58FFE1D41241F003E390D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2E58FF21D41241F003E390D /* LiveVideoCoreImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveVideoCoreImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E58FF51D41241F003E390D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2E58FF71D41241F003E390D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F2E58FFA1D41241F003E390D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2E58FFC1D41241F003E390D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2E58FFF1D41241F003E390D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2E590011D41241F003E390D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2E58FEF1D41241F003E390D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2E58FE91D41241F003E390D = {
+			isa = PBXGroup;
+			children = (
+				F2E58FF41D41241F003E390D /* LiveVideoCoreImage */,
+				F2E58FF31D41241F003E390D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2E58FF31D41241F003E390D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2E58FF21D41241F003E390D /* LiveVideoCoreImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2E58FF41D41241F003E390D /* LiveVideoCoreImage */ = {
+			isa = PBXGroup;
+			children = (
+				F2E58FF51D41241F003E390D /* AppDelegate.swift */,
+				F2E58FF71D41241F003E390D /* ViewController.swift */,
+				F2E58FF91D41241F003E390D /* Main.storyboard */,
+				F2E58FFC1D41241F003E390D /* Assets.xcassets */,
+				F2E58FFE1D41241F003E390D /* LaunchScreen.storyboard */,
+				F2E590011D41241F003E390D /* Info.plist */,
+			);
+			path = LiveVideoCoreImage;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2E58FF11D41241F003E390D /* LiveVideoCoreImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E590041D41241F003E390D /* Build configuration list for PBXNativeTarget "LiveVideoCoreImage" */;
+			buildPhases = (
+				F2E58FEE1D41241F003E390D /* Sources */,
+				F2E58FEF1D41241F003E390D /* Frameworks */,
+				F2E58FF01D41241F003E390D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LiveVideoCoreImage;
+			productName = LiveVideoCoreImage;
+			productReference = F2E58FF21D41241F003E390D /* LiveVideoCoreImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2E58FEA1D41241F003E390D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Third Rail, LLC";
+				TargetAttributes = {
+					F2E58FF11D41241F003E390D = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F2E58FED1D41241F003E390D /* Build configuration list for PBXProject "LiveVideoCoreImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2E58FE91D41241F003E390D;
+			productRefGroup = F2E58FF31D41241F003E390D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2E58FF11D41241F003E390D /* LiveVideoCoreImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2E58FF01D41241F003E390D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E590001D41241F003E390D /* LaunchScreen.storyboard in Resources */,
+				F2E58FFD1D41241F003E390D /* Assets.xcassets in Resources */,
+				F2E58FFB1D41241F003E390D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2E58FEE1D41241F003E390D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E58FF81D41241F003E390D /* ViewController.swift in Sources */,
+				F2E58FF61D41241F003E390D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2E58FF91D41241F003E390D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E58FFA1D41241F003E390D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2E58FFE1D41241F003E390D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2E58FFF1D41241F003E390D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2E590021D41241F003E390D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2E590031D41241F003E390D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2E590051D41241F003E390D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LiveVideoCoreImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thirdrail.LiveVideoCoreImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2E590061D41241F003E390D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LiveVideoCoreImage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thirdrail.LiveVideoCoreImage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2E58FED1D41241F003E390D /* Build configuration list for PBXProject "LiveVideoCoreImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E590021D41241F003E390D /* Debug */,
+				F2E590031D41241F003E390D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E590041D41241F003E390D /* Build configuration list for PBXNativeTarget "LiveVideoCoreImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E590051D41241F003E390D /* Debug */,
+				F2E590061D41241F003E390D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2E58FEA1D41241F003E390D /* Project object */;
+}
