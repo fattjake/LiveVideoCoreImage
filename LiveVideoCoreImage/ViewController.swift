@@ -11,13 +11,21 @@ import AVFoundation
 import CoreImage
 import GLKit
 
+extension CGRect {
+    var center : CGPoint {
+        get {
+            return CGPoint(x: origin.x + size.width / 2.0, y: origin.y + size.height / 2.0)
+        }
+    }
+}
+
 class ViewController: GLKViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
     let captureSession = AVCaptureSession()
     var device : AVCaptureDevice?
     
     var videoDataOutput = AVCaptureVideoDataOutput()
-    let videoDispatchQueue = dispatch_queue_create("com.LiveVideo.videoCallback", nil)
+    let videoDispatchQueue = DispatchQueue(label: "com.LiveVideo.videoCallback", attributes: [])
     
     var ciContext : CIContext?
     var pause = false
@@ -31,16 +39,16 @@ class ViewController: GLKViewController, AVCaptureVideoDataOutputSampleBufferDel
         super.viewDidLoad()
       
         if let glView = self.view as? GLKView {
-            let context = EAGLContext(API: EAGLRenderingAPI.OpenGLES2)
-            glView.context = context
-            ciContext = CIContext(EAGLContext: context)
+            let context = EAGLContext(api: EAGLRenderingAPI.openGLES2)
+            glView.context = context!
+            ciContext = CIContext(eaglContext: context!)
         }
         
         captureSession.beginConfiguration()
         
         captureSession.sessionPreset = AVCaptureSessionPresetHigh
         
-        let devices = AVCaptureDevice.devices().filter{ $0.hasMediaType(AVMediaTypeVideo) && $0.position == AVCaptureDevicePosition.Back }
+        let devices = AVCaptureDevice.devices().filter{ ($0 as AnyObject).hasMediaType(AVMediaTypeVideo) && ($0 as AnyObject).position == AVCaptureDevicePosition.back }
         device = devices.first as? AVCaptureDevice
         
         do {
@@ -51,7 +59,13 @@ class ViewController: GLKViewController, AVCaptureVideoDataOutputSampleBufferDel
         } catch {
             print("error no input")
         }
-        
+
+//        let previewLayer = AVCaptureVideoPreviewLayer()
+//        previewLayer.bounds = view.bounds
+//        previewLayer.position = view.frame.center
+//        
+//        view.layer.addSublayer(previewLayer)
+//        previewLayer.session = captureSession
         videoDataOutput.setSampleBufferDelegate(self, queue: videoDispatchQueue)
         
         if (captureSession.canAddOutput(videoDataOutput)) {
@@ -68,11 +82,14 @@ class ViewController: GLKViewController, AVCaptureVideoDataOutputSampleBufferDel
         // Dispose of any resources that can be recreated.
     }
 
-    func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
     
         if pause { return }
         guard let videoPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
-        let image = CIImage(CVPixelBuffer: videoPixelBuffer)
+        let image = CIImage(cvPixelBuffer: videoPixelBuffer)
+        
+//        ciContext?.draw(image, in: view.bounds, from: image.extent)
+        
         if let filter = CIFilter(name: "CICrystallize") {
             filter.setValue(image, forKey: kCIInputImageKey)
             filter.setValue(slider.value, forKey: "inputRadius")
@@ -80,14 +97,15 @@ class ViewController: GLKViewController, AVCaptureVideoDataOutputSampleBufferDel
         }
     }
     
-    override func glkView(view: GLKView, drawInRect rect: CGRect) {
+    override func glkView(_ view: GLKView, drawIn rect: CGRect) {
         if let outputImage = outputImage {
-            let transformedImage = outputImage.imageByApplyingTransform(CGAffineTransformMakeRotation(CGFloat(-M_PI_2)))
-            self.ciContext?.drawImage(transformedImage, inRect: CGRect(x: 0, y:0, width: self.view.frame.size.width * 2.0, height: self.view.frame.size.height * 2.0), fromRect: transformedImage.extent)
+            let transformedImage = outputImage.applying(CGAffineTransform(rotationAngle: CGFloat(-M_PI_2)))
+            let scale = UIScreen.main.scale
+            self.ciContext?.draw(transformedImage, in: CGRect(x: 0, y:0, width: self.view.frame.size.width * scale, height: self.view.frame.size.height * scale), from: transformedImage.extent)
         }
     }
     
-    @IBAction func doStuffButtonPressed(sender: AnyObject) {
+    @IBAction func doStuffButtonPressed(_ sender: AnyObject) {
         //Change torch mode
         do {
             try device?.lockForConfiguration()
