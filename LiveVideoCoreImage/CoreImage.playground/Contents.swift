@@ -3,7 +3,7 @@
 import UIKit
 import CoreImage
 
-let names = CIFilter.filterNamesInCategories(nil)
+let names = CIFilter.filterNames(inCategories: nil)
 
 
 for name in names {
@@ -20,23 +20,23 @@ let edgeWorkFilter = CIFilter(name:"CIEdgeWork")
 print(filter?.attributes)
 print(additionFilter?.attributes)
 
-if let path = NSBundle.mainBundle().pathForResource("mountain", ofType: "jpg"),
+if let path = Bundle.main.path(forResource: "mountain", ofType: "jpg"),
     let uiInputImage = UIImage(contentsOfFile: path),
-    let cgInputImage = uiInputImage.CGImage,
+    let cgInputImage = uiInputImage.cgImage,
     let filter = filter,
     let additionFilter = additionFilter,
     let edgeWorkFilter = edgeWorkFilter {
     
-    let ciInputImage = CIImage(CGImage: cgInputImage)
+    let ciInputImage = CIImage(cgImage: cgInputImage)
     filter.setValue(ciInputImage, forKey: kCIInputImageKey)
     edgeWorkFilter.setValue(ciInputImage, forKey: kCIInputImageKey)
     
-    let filterImage = UIImage(CIImage: (filter.outputImage)!)
-    let edgeWorkImage = UIImage(CIImage: (edgeWorkFilter.outputImage)!)
+    let filterImage = UIImage(ciImage: (filter.outputImage)!)
+    let edgeWorkImage = UIImage(ciImage: (edgeWorkFilter.outputImage)!)
     
     additionFilter.setValue(filter.outputImage, forKey: kCIInputBackgroundImageKey)
     additionFilter.setValue(edgeWorkFilter.outputImage, forKey: kCIInputImageKey)
     
-    let outputImage = UIImage(CIImage: (additionFilter.outputImage)!)
+    let outputImage = UIImage(ciImage: (additionFilter.outputImage)!)
     
 }

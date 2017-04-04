@@ -11,6 +11,7 @@ import AVFoundation
 import CoreImage
 import GLKit
 
+
 extension CGRect {
     var center : CGPoint {
         get {
